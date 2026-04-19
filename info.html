@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ФСБ ДФ - Информация.</title>
+    <style>
+
+        
+        body {
+            margin: 0;
+            background-color: #000000;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+
+        /* Контент страницы Контракты */
+        .contracts-content {
+            display: flex;
+            flex-direction: column; /* Элементы будут идти друг под другом */
+            align-items: center;    /* Центрирует всё (текст, фото, кнопки) по горизонтали */
+            text-align: center;     /* На всякий случай для самого текста */
+        }
+
+        /* Текст с белой обводкой */
+        .outline-text {
+            font-size: 3.5rem;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            color: white;
+            /* Вот здесь создается эффект обводки */
+            text-shadow: 
+                -1px -1px 0 #fff,  
+                 1px -1px 0 #fff,
+                -1px  1px 0 #fff,
+                 1px  1px 0 #fff;
+            color: #0b0b0b; /* Делаем тело букв темным, чтобы была видна только обводка */
+            margin-bottom: 20px;
+        }
+
+        .main-image {
+            position: absolute; /* Позволяет двигать картинку независимо от текста */
+            top: 50%;           /* Центрирует по вертикали */
+            left: 50%;          /* Центрирует по горизонтали */
+            transform: translate(-50%, -50%); /* Точное выравнивание по центру */
+    
+            z-index: -1;        /* ГЛАВНОЕ: уводит картинку на слой ПОД текст */
+    
+            opacity: 0.2;       /* Делает логотип полупрозрачным, чтобы он не мешал чтению */
+            width: 400px;       /* Настрой размер под себя */
+            pointer-events: none; /* Чтобы картинка не мешала кликать по тексту */
+        }
+
+        .dopolnenie {
+            display: block;      
+            margin: 20px auto;  
+            width: 200px ;   
+            max-width: 600px;     
+            height: auto;
+            opacity: 0;         
+            animation: introImage 5s ease-in-out forwards;
+        }
+        .description {
+            font-size: 18px;
+            color: #ccc;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+
+        /* Кнопка назад */
+        .back-btn {
+            margin-top: 20px;
+            display: inline-block;
+            color: #555;
+            text-decoration: none;
+            font-size: 12px;
+            border-bottom: 1px solid #333;
+            transition: 0.3s;
+        }
+        .back-btn:hover { color: white; border-color: white; }
+
+        @keyframes introImage {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            30% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            70% { opacity: 1; }
+            100% { opacity: 0.1; z-index: 0; transform: translate(-50%, -50%) scale(0.9); } 
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="FSB 2.jpg" alt="ФСБ" class="main-image">
+
+    <div class="contracts-content">
+        <div class="outline-text">ИНФОРМАЦИЯ.</div>
+        <p class="description">
+            Список информации боевых действий.
+            Доступно для прочтения всем желающим.
+        </p>
+                <p class="description">
+                ФСБ Альфа. CQB тренировки проходят удачно. Все проходит гладко, бойцы учатся
+                пока-что, наша команда тренируется бою на ближнем расстоянии. Чтобы получалось 
+                устранять боевиков в помещениях. Играем в отдельные полигонах стрельбища.
+        </p>
+
+        <img src="CQB.jpg" alt="ФСБ" class=".dopolnenie">
+
+      
+        </p>
+
+        <a href="index.html" class="back-btn">← Вернуться в главное меню</a>
+    </div>
+
+    <div class="scroll-container">
+  <input type="range" id="scrollSlider" min="0" max="100" value="0">
+</div>
+
+    
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ФСБ ДФ - Информация.</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #000000;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Тот же самый логотип */
+        .main-image {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: auto;
+            z-index: 2;
+            opacity: 0;
+            animation: introImage 5s ease-in-out forwards;
+        }
+
+        /* Контент страницы Контракты */
+        .contracts-content {
+            position: relative;
+            z-index: 5;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+            animation-delay: 3.5s; 
+        }
+
+        /* Текст с белой обводкой */
+        .outline-text {
+            font-size: 3.5rem;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            color: white;
+            /* Вот здесь создается эффект обводки */
+            text-shadow: 
+                -1px -1px 0 #fff,  
+                 1px -1px 0 #fff,
+                -1px  1px 0 #fff,
+                 1px  1px 0 #fff;
+            color: #0b0b0b; /* Делаем тело букв темным, чтобы была видна только обводка */
+            margin-bottom: 20px;
+        }
+
+        .description {
+            font-size: 18px;
+            color: #ccc;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* Кнопка назад */
+        .back-btn {
+            margin-top: 40px;
+            display: inline-block;
+            color: #555;
+            text-decoration: none;
+            font-size: 12px;
+            border-bottom: 1px solid #333;
+            transition: 0.3s;
+        }
+        .back-btn:hover { color: white; border-color: white; }
+
+        @keyframes introImage {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            30% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            70% { opacity: 1; }
+            100% { opacity: 0.1; z-index: 0; transform: translate(-50%, -50%) scale(0.9); } 
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="FSB 2.jpg" alt="ФСБ" class="main-image">
+
+    <div class="contracts-content">
+        <div class="outline-text">Подать заявку.</div>
+        <p class="description">
+        Набор в ЦСН Альфа Давидовская федерация
+        Анти-терроризм открыт.
+        </p>
+                <p class="description">
+                    Подробно можете узнать что требуется
+                    от кандидатов, скопировав данную ссылку.
+                    Ссылка в данный момент не доступна. 
+                    Обращайтесь к @misaanthropic
+                    Telegram.
+        </p>
+
+
+
+        <a href="index.html" class="back-btn">← Вернуться в главное меню</a>
+    </div>
+
+    
+</body>
+</html>

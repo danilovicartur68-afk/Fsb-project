@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ФСБ ДФ - Контракт.</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #000000;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Тот же самый логотип */
+        .main-image {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: auto;
+            z-index: 2;
+            opacity: 0;
+            animation: introImage 5s ease-in-out forwards;
+        }
+
+        /* Контент страницы Контракты */
+        .contracts-content {
+            position: relative;
+            z-index: 5;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+            animation-delay: 3.5s; 
+        }
+
+        /* Текст с белой обводкой */
+        .outline-text {
+            font-size: 3.5rem;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            color: white;
+            /* Вот здесь создается эффект обводки */
+            text-shadow: 
+                -1px -1px 0 #fff,  
+                 1px -1px 0 #fff,
+                -1px  1px 0 #fff,
+                 1px  1px 0 #fff;
+            color: #0b0b0b; /* Делаем тело букв темным, чтобы была видна только обводка */
+            margin-bottom: 20px;
+        }
+
+        .description {
+            font-size: 18px;
+            color: #ccc;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .description2 {
+            text-align: center;    /* Это свойство выровняет текст по центру */
+    
+    /* Твои остальные параметры (шрифт, цвет и т.д.) */
+            font-size: 18px; 
+            color: #ccc;
+             max-width: 800px;      /* Важно оставить это, чтобы текст не растягивался в одну длинную нитку */
+            margin: 20px auto;     /* Это центрирует сам текстовый блок на странице */
+}
+
+        /* Кнопка назад */
+        .back-btn {
+            margin-top: 40px;
+            display: inline-block;
+            color: #555;
+            text-decoration: none;
+            font-size: 12px;
+            border-bottom: 1px solid #333;
+            transition: 0.3s;
+        }
+        .back-btn:hover { color: white; border-color: white; }
+
+        @keyframes introImage {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            30% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            70% { opacity: 1; }
+            100% { opacity: 0.1; z-index: 0; transform: translate(-50%, -50%) scale(0.9); } 
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="FSB 2.jpg" alt="ФСБ" class="main-image">
+
+    <div class="contracts-content">
+        <div class="outline-text">Разрешение на ношение оружия и его хранение</div>
+        <p class="description2">
+            Читайте ниже.
+        </p>
+        <h1 class="description2">
+            Разершение на ношение оружия, и его хранение
+        </h1>
+                <p class="description2">
+                    получние разрешения на оружие действует строго по регламенту. Обращайтесь за разрешение на ношение и хранение огнестрельного оружия именно к нам.
+        </p>
+
+        <p class ="description2">
+            Регламент получения запрещенного оружия на территории Давидовской федерации.
+        </p>
+
+        <p class="description2">1. Получение тактического оружия имеет любое значение, от автоматической винтовки, или пистолета. До Дробовика или охотничьего ружья.</p>
+
+<p class="description2">2. Кандидат на получение разрешения на ношение тактического оружия должен иметь при себе официальную выписку от больницы округа Давидовск А+. О том, что кандидат здоров.</p>
+
+<p class="description2">3. Кандидат должен иметь при себе военный билет. Т.е отслужить в армии Давидовской Федерации.</p>
+
+<p class="description2">4. Отсутствие противопоказаний, вы не должны иметь судимость (//на всех персонажах).</p>
+
+<p class="description2">5. Возраст, от 21 года.</p>
+
+<p class="description2">6. По регламенту вы должны быть обязаны быть гражданином Давидовской Федерации.</p>
+
+<p class="description2">7. Заявка просматривается до 3 дней.</p>
+
+  <a href="index.html" class="back-btn">← Вернуться в главное меню</a>
+    </div>
+
+    
+</body>
+</html>
